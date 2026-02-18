@@ -1,9 +1,36 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Environment files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env.development
-.env.test
-.env.production
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Editor directories & files
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Optional: if you later test with local server tools
+node_modules/
+dist/
+build/
