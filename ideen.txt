@@ -1,0 +1,4 @@
+sub-menus:
+- dienstleistungen
+- referenz-objekte
+- kontakt
