@@ -11,6 +11,10 @@
   font-family: "Kumbh Sans", sans-serif;
 }
 
+main {
+  padding-top: 7rem; /* Abstand unter der fixen Navbar */
+}
+
 /* navbar start */
 .logo img {
   height: clamp(3.2rem, 15vh, 5.2rem);
@@ -55,6 +59,8 @@
 
 /* hero section start */
 .carousel {
+  padding: 2rem 5vw;
+  min-height: 340px;
   display: flex;
   overflow-x: auto;
 }
@@ -67,13 +73,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  gap: 1rem;
   /*animation: spin 5s infinite linear;*/
-  padding-right: 1em;
+  padding-right: 1rem;
 }
 
-.hero_img img {
-  flex: 0 0 5em;
+.hero_img {
+  flex: 0 0 auto;
+  height: 260px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
 }
 
 @keyframes spin {
