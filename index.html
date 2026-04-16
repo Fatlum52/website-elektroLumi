@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,60 +9,54 @@
   </head>
 
   <body>
-    <!-- navbar -->
-    <nav class="navbar">
-      <a href="/" class="logo">
-        <img src="assets/icons/logo.svg" alt="Elektro Lumi Logo" />
-      </a>
-      <ul class="nav_links">
-        <li><a href="/leistungen.html" class="navbar_items">Leistungen</a></li>
-        <li>
-          <a href="/objects.html" class="navbar_items">Objekte</a>
-        </li>
-        <li><a href="/kontakt.html" class="navbar_items">Kontakt</a></li>
-      </ul>
-    </nav>
-    <!-- navbar -->
+    <header>
+      <nav class="navbar" aria-label="Hauptnavigation">
+        <div class="navbar-inner wrap">
+          <a href="/" class="logo">
+            <img src="assets/icons/logo.svg" alt="Elektro Lumi Logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="/leistungen.html" class="nav-items">Leistungen</a></li>
+            <li><a href="/objects.html" class="nav-items">Objekte</a></li>
+            <li><a href="/kontakt.html" class="nav-items">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <main>
-      <div class="carousel">
-        <div class="group">
+      <section class="hero" aria-label="Startbereich">
+        <div class="hero-media" aria-hidden="true">
           <img
-            src="assets/images/rohbau-einlegen-grossesfoto.JPG"
-            class="hero_img"
-            alt="Elektroinstallation im Rohbau mit verlegten Leitungen"
-          />
-          <img
-            src="assets/images/einlegen-leitungen2.JPG"
-            class="hero_img"
-            alt="Einlegen von Elektroleitungen in der Decke"
-          />
-          <img
-            src="assets/images/hv-sauber.jpg"
-            class="hero_img"
-            alt="Sauber verdrahteter Hauptelektroverteiler"
-          />
-          <img
-            src="assets/images/elektro2.jpg"
-            class="hero_img"
-            alt="Detailaufnahme eingelegter Leitungen"
+            src="assets/images/hero-img1.png"
+            alt=""
+            class="hero-img"
+            width="1448"
+            height="1086"
+            decoding="async"
+            fetchpriority="high"
           />
         </div>
-        <div aria-hidden class="group">
-          <img
-            src="assets/images/rohbau-einlegen-grossesfoto.JPG"
-            class="hero_img"
-            alt=""
-          />
-          <img
-            src="assets/images/einlegen-leitungen2.JPG"
-            class="hero_img"
-            alt=""
-          />
-          <img src="assets/images/hv-sauber.jpg" class="hero_img" alt="" />
-          <img src="assets/images/elektro2.jpg" class="hero_img" alt="" />
+
+        <div class="hero-inner wrap">
+          <div class="hero-callout">
+            <p class="hero-callout-title">
+              Ihr Partner für qualitativ hochwertige Elektroinstallationen.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="intro" aria-label="Über Elektro Lumi">
+        <div class="wrap">
+          <h1 class="intro-title">Ihr Elektropartner aus der Region</h1>
+          <p class="intro-text">
+            Seit über 15 Jahren sorgt die Elektro Lumi GmbH für qualitativ
+            hochwertige Installationen. Ob Umbau, Neubau, Elektroladestation,
+            Gegensprechanlage oder Smart-Home-Lösungen – wir sind für Sie da.
+          </p>
+        </div>
+      </section>
     </main>
   </body>
 </html>

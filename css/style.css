@@ -1,126 +1,229 @@
 :root {
-  --color-primary: rgba(30, 90, 115, 1); /* 1e5a73ff */
-  --color-secondary: rgba(29, 95, 140, 1); /* 1d5f8cff */
-  --color-tertiary: rgba(20, 65, 96, 1); /* 144160ff */
+  --primary: rgba(30, 90, 115, 1);
+  --secondary: rgba(29, 95, 140, 1);
+  --tertiary: rgba(20, 65, 96, 1);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Kumbh Sans", sans-serif;
 }
 
-main {
-  padding-top: 7rem; /* Abstand unter der fixen Navbar */
+body {
+  font-family: "Kumbh Sans", system-ui, sans-serif;
+  color: #0f172a;
+  background: #f6f7fb;
+  line-height: 1.55;
 }
 
-/* navbar start */
-.logo img {
-  height: clamp(3.2rem, 15vh, 5.2rem);
-  width: auto;
+img {
   display: block;
 }
 
-.navbar {
-  position: fixed;
-  top: clamp(0.5rem, 2vh, 1.25rem);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90vw;
-  background: #ffffff26;
-  backdrop-filter: blur(1rem);
-  padding: clamp(0.85rem, 1.9vw, 1.25rem) clamp(1.2rem, 3.2vw, 2.4rem);
-  border-radius: clamp(1.2rem, 3vw, 3rem);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: clamp(0.75rem, 2vw, 1.5rem);
-  box-shadow: 0 0.6rem 1.8rem #00000044;
-  animation: anime 0.5s ease forwards;
-  z-index: 10;
+a {
+  color: inherit;
 }
 
-.nav_links {
+/* ==========================================================
+   Wrapper: gleicher seitlicher Abstand überall
+   ========================================================== */
+.wrap {
+  padding-inline: 5vw;
+}
+
+/* ==========================================================
+   Navbar
+   ========================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.2vh;
+}
+
+.logo img {
+  height: 8vw;
+  width: auto;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: clamp(0.8rem, 2.2vw, 1.8rem);
+  gap: 4vw;
 }
 
-.navbar_items {
+.nav-items {
   text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 700;
-  font-size: clamp(1rem, 1.9vw, 1.15rem);
+  color: var(--primary);
+  font-weight: 650;
+  font-size: 3.8vw;
   letter-spacing: 0.01em;
 }
-/* navbar end */
 
-/* hero section start */
-.carousel {
-  padding: 2rem 5vw;
-  min-height: 340px;
-  display: flex;
-  overflow-x: auto;
+.nav-items:hover {
+  opacity: 0.7;
 }
 
-.carousel::-webkit-scrollbar {
-  display: none;
+/* ==========================================================
+   Hero
+   ========================================================== */
+.hero {
+  position: relative;
+  height: 45vh;
+  background: #0b1f2a;
 }
 
-.group {
+.hero-media {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 31, 42, 0.55) 0%,
+    rgba(11, 31, 42, 0.22) 46%,
+    rgba(11, 31, 42, 0.12) 100%
+  );
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  /*animation: spin 5s infinite linear;*/
-  padding-right: 1rem;
 }
 
-.hero_img {
-  flex: 0 0 auto;
-  height: 260px;
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 1.2rem;
+.hero-callout {
+  max-width: 85%;
+  padding: 4vw;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(30, 90, 115, 0.42);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.18);
 }
 
-@keyframes spin {
-  from {
-    transform: 0;
+.hero-callout-title {
+  font-size: 4.5vw;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+/* ==========================================================
+   Intro
+   ========================================================== */
+.intro {
+  padding-block: 5vh;
+}
+
+.intro-title {
+  font-size: 6vw;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--tertiary);
+  margin-bottom: 0.6rem;
+}
+
+.intro-text {
+  font-size: 4vw;
+  color: rgba(15, 23, 42, 0.72);
+  max-width: 62ch;
+}
+
+/* ==========================================================
+   Desktop (ab 768px – iPad Mini aufwärts)
+   ========================================================== */
+@media (min-width: 768px) {
+  .wrap {
+    padding-inline: 3vw;
   }
-  to {
-    translate: -100%;
-  }
-}
-/* hero section end */
 
-@media (max-width: 44rem) {
+  .navbar-inner {
+    padding-block: 1.6vh;
+  }
+
   .logo img {
-    height: clamp(2.7rem, 6vh, 3.8rem);
-  }
-
-  .navbar {
-    width: 90vw;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: 6.2vw;
   }
 
   .nav-links {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 2.1vw;
+  }
+
+  .nav-items {
+    font-size: 1.5vw;
+  }
+
+  .hero {
+    height: 55vh;
+  }
+
+  .hero-callout {
+    max-width: 32rem;
+    padding: 1.4vw;
+  }
+
+  .hero-callout-title {
+    font-size: 1.55vw;
+  }
+
+  .intro {
+    padding-block: 5vh;
+  }
+
+  .intro-title {
+    font-size: 2.2vw;
+  }
+
+  .intro-text {
+    font-size: 1.1vw;
   }
 }
 
-@keyframes anime {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -8vh);
+/* ==========================================================
+   Phone (bis 480px)
+   ========================================================== */
+@media (max-width: 480px) {
+  .wrap {
+    padding-inline: 4.5vw;
   }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
+
+  .navbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vh;
+  }
+
+  .hero {
+    height: 35vh;
+  }
+
+  .hero-inner {
+    align-items: flex-end;
+    padding-bottom: 3vh;
   }
 }
