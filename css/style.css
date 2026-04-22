@@ -113,24 +113,25 @@ a {
   z-index: 2;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
 }
 
 .hero-callout {
-  max-width: 85%;
-  padding: 4vw;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(30, 90, 115, 0.42);
-  backdrop-filter: blur(10px);
+  max-width: 32rem;
+  padding: 1rem 1.2rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(30, 90, 115, 0.28);
+  backdrop-filter: blur(6px);
   color: #fff;
-  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.14);
 }
 
 .hero-callout-title {
-  font-size: 4.5vw;
-  font-weight: 750;
-  line-height: 1.25;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 /* ==========================================================
@@ -163,11 +164,11 @@ a {
   }
 
   .navbar-inner {
-    padding-block: 1.6vh;
+    padding-block: 1vh;
   }
 
   .logo img {
-    height: 6.2vw;
+    height: 5.7vw;
   }
 
   .nav-links {
@@ -175,7 +176,7 @@ a {
   }
 
   .nav-items {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
   .hero {
@@ -183,12 +184,12 @@ a {
   }
 
   .hero-callout {
-    max-width: 32rem;
-    padding: 1.4vw;
+    max-width: 24rem;
+    padding: 1rem 1.2rem;
   }
 
   .hero-callout-title {
-    font-size: 1.55vw;
+    font-size: 1.05rem;
   }
 
   .intro {
@@ -225,5 +226,14 @@ a {
   .hero-inner {
     align-items: flex-end;
     padding-bottom: 3vh;
+  }
+
+  .hero-callout {
+    max-width: 78%;
+    padding: 0.9rem 1rem;
+  }
+
+  .hero-callout-title {
+    font-size: 0.5rem;
   }
 }
