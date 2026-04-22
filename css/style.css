@@ -32,6 +32,87 @@ a {
   padding-inline: 5vw;
 }
 
+/* Sections-style*/
+.section-title {
+  font-size: 2rem;
+  line-height: 1.15;
+  color: var(--tertiary);
+  margin-bottom: 1.5rem;
+}
+
+/*Services*/
+.services-preview {
+  padding-block: 2rem 4rem;
+}
+
+.services-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  padding: 1.3rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(15, 23, 42, 0.05);
+}
+
+.service-card h3 {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 1rem;
+}
+
+/* CTA */
+.cta {
+  padding-bottom: 5rem;
+}
+
+.cta-box {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 65, 96, 1),
+    rgba(29, 95, 140, 1)
+  );
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cta-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.cta-text {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 60ch;
+}
+
+.cta-button {
+  display: inline-block;
+  width: fit-content;
+  background: #fff;
+  color: var(--tertiary);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.8rem 1.1rem;
+  border-radius: 0.7rem;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
+
 /* ==========================================================
    Navbar
    ========================================================== */
@@ -193,7 +274,7 @@ a {
   }
 
   .intro {
-    padding-block: 5vh;
+    padding-block: 5vh 3vh;
   }
 
   .intro-title {
@@ -202,6 +283,42 @@ a {
 
   .intro-text {
     font-size: 1.1vw;
+  }
+
+  .section-title {
+    font-size: 2.1vw;
+    margin-bottom: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.3rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.2vw;
+  }
+
+  .service-card p {
+    font-size: 1vw;
+  }
+
+  .cta-box {
+    grid-template-columns: 1fr auto;
+    padding: 2rem;
+  }
+
+  .cta-title {
+    font-size: 1.7vw;
+  }
+
+  .cta-text {
+    font-size: 1vw;
+  }
+
+  .cta-button {
+    font-size: 1vw;
+    padding: 0.9rem 1.2rem;
   }
 }
 
@@ -234,6 +351,16 @@ a {
   }
 
   .hero-callout-title {
-    font-size: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .intro-text,
+  .service-card p,
+  .cta-text {
+    font-size: 1rem;
   }
 }
