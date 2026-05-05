@@ -2,6 +2,7 @@
   --primary: rgba(30, 90, 115, 1);
   --secondary: rgba(29, 95, 140, 1);
   --tertiary: rgba(20, 65, 96, 1);
+  --background-color: #f5f6fc;
 }
 
 * {
@@ -12,9 +13,10 @@
 
 body {
   font-family: "Kumbh Sans", system-ui, sans-serif;
-  color: #0f172a;
-  background: #f6f7fb;
+  color: var(--primary);
+  background: var(--background-color);
   line-height: 1.55;
+  letter-spacing: 0.01em;
 }
 
 img {
@@ -127,7 +129,6 @@ a {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #fff;
 }
 
 .navbar-inner {
@@ -150,15 +151,22 @@ a {
 }
 
 .nav-items {
+  display: inline-block;
   text-decoration: none;
   color: var(--primary);
   font-weight: 650;
   font-size: 3.8vw;
   letter-spacing: 0.01em;
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.6rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .nav-items:hover {
-  opacity: 0.7;
+  background-color: var(--primary);
+  color: #fff;
 }
 
 /* ==========================================================
@@ -231,7 +239,7 @@ a {
 
 .intro-title {
   font-size: 6vw;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.005em;
   line-height: 1.15;
   color: var(--tertiary);
   margin-bottom: 0.6rem;
