@@ -3,6 +3,7 @@
   --secondary: rgba(29, 95, 140, 1);
   --tertiary: rgba(20, 65, 96, 1);
   --background-color: #f5f6fc;
+  --footer-background: #334e68;
 }
 
 * {
@@ -173,6 +174,25 @@ a {
 .nav-items:hover {
   background-color: var(--primary);
   color: #fff;
+}
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+.footer {
+  position: sticky;
+  background-color: var(--footer-background);
+  color: #fff;
+  padding: 3rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-inner ul {
+  list-style: none;
 }
 
 /* ==========================================================
