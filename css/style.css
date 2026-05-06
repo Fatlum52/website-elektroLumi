@@ -191,8 +191,18 @@ a {
   justify-content: space-between;
 }
 
-.footer-inner ul {
+.footer-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-list-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
 }
 
 /* ==========================================================
