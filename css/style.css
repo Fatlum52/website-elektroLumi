@@ -180,7 +180,6 @@ a {
    Footer
    ========================================================== */
 .footer {
-  position: sticky;
   background-color: var(--footer-background);
   color: #fff;
   padding: 3rem;
