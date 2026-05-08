@@ -176,6 +176,12 @@ a {
   color: #fff;
 }
 
+/* styling of hamburger menu in media query */
+.ham-menu,
+.off-screen-menu {
+  display: none;
+}
+
 /* ==========================================================
    Footer
    ========================================================== */
@@ -385,10 +391,89 @@ a {
     padding-inline: 4.5vw;
   }
 
-  .navbar-inner {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  /* --------------------------------------------------------
+     Hamburger Button
+     -------------------------------------------------------- */
+  .ham-menu {
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 80;
+  }
+
+  .ham-menu span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4px;
+    width: 80%;
+    background-color: var(--primary);
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+
+  .ham-menu span:nth-child(3) {
+    top: 75%;
+  }
+
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  /* --------------------------------------------------------
+     Slide-In Panel
+     -------------------------------------------------------- */
+  .off-screen-menu {
+    display: block;
+    position: fixed;
+    top: 4.3rem;
+    right: 0;
+    z-index: 60;
+    width: min(85vw, 18rem);
+    max-height: calc(100dvh - 5.2rem);
+    padding: 1.2rem;
+    background-color: var(--primary);
+    opacity: 0.9;
+    border-radius: 0.9rem 0 0 0.9rem;
+    box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.24);
+    overflow-y: auto;
+    transform: translateX(110%);
+    transition: transform 0.3s ease;
+  }
+
+  .off-screen-menu.active {
+    transform: translateX(0);
+  }
+
+  .off-screen-menu .nav-links {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5vh;
+    gap: 1rem;
+  }
+
+  .off-screen-menu .nav-items {
+    color: #fff;
   }
 
   .footer-inner {
