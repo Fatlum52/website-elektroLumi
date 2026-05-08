@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then((data) => {
         headerContainer.innerHTML = data;
+        if (typeof initHamburgerMenu === "function") {
+          initHamburgerMenu(headerContainer);
+        }
         highlightActiveLink();
       })
       .catch((error) => console.error("Fehler beim Header-Laden:", error));
