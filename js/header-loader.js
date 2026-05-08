@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.pathname.split("/").pop() || "index.html";
 
     // Sucht alle Links im neu geladenen Header
-    const navLinks = document.querySelectorAll(".nav-items");
+    const navLinks = document.querySelectorAll(".nav-item");
 
     navLinks.forEach((link) => {
       // Wenn das href-Attribut mit dem aktuellen Pfad übereinstimmt

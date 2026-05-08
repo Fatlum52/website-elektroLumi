@@ -15,7 +15,7 @@ function initHamburgerMenu(root) {
     setOpen(nextState);
   });
 
-  offScreenMenu.querySelectorAll(".nav-items").forEach((link) => {
+  offScreenMenu.querySelectorAll(".nav-item").forEach((link) => {
     link.addEventListener("click", () => setOpen(false));
   });
 }

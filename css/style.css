@@ -157,7 +157,7 @@ a {
   gap: 4vw;
 }
 
-.nav-items {
+.nav-item {
   display: inline-block;
   text-decoration: none;
   color: var(--primary);
@@ -171,7 +171,7 @@ a {
     color 0.2s ease;
 }
 
-.nav-items:hover {
+.nav-item:hover {
   background-color: var(--primary);
   color: #fff;
 }
@@ -317,7 +317,7 @@ a {
     gap: 2.1vw;
   }
 
-  .nav-items {
+  .nav-item {
     font-size: 1.2vw;
   }
 
@@ -472,7 +472,7 @@ a {
     gap: 1rem;
   }
 
-  .off-screen-menu .nav-items {
+  .off-screen-menu .nav-item {
     color: #fff;
   }
 
