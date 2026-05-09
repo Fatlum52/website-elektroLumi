@@ -263,7 +263,7 @@ a {
 }
 
 .hero-callout {
-  max-width: 24rem;
+  max-width: 20%;
   padding: 1rem 1.2rem;
   border-radius: var(--radius);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -274,7 +274,7 @@ a {
 }
 
 .hero-callout-title {
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.35;
 }
