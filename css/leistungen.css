@@ -1,0 +1,107 @@
+/* ==========================================================
+   Services Page
+   ========================================================== */
+.services-page {
+  padding-block: 4rem 5rem;
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2.5rem;
+  align-items: start;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1.2rem;
+  padding: 2rem;
+  box-shadow: 0 0.8rem 1.8rem rgba(15, 23, 42, 0.06);
+}
+
+.service-kicker {
+  color: var(--secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-detail h2 {
+  color: var(--tertiary);
+  font-size: 2.2vw;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.service-lead {
+  color: rgba(15, 23, 42, 0.78);
+  font-size: 1.15vw;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.service-detail-content p:not(.service-kicker):not(.service-lead) {
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 1vw;
+  max-width: 58ch;
+}
+
+.service-detail-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.service-detail-card {
+  background: var(--background-color);
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 1rem;
+  padding: 1.2rem;
+}
+
+.service-detail-card h3 {
+  color: var(--primary);
+  font-size: 1.1vw;
+  margin-bottom: 0.45rem;
+}
+
+.service-detail-card p {
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 0.95vw;
+}
+
+/* ==========================================================
+   Phone (bis 480px)
+   ========================================================== */
+@media (max-width: 480px) {
+  .services-page {
+    padding-block: 2.5rem 4rem;
+  }
+
+  .service-detail {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.3rem;
+  }
+
+  .service-detail h2 {
+    font-size: 1.6rem;
+  }
+
+  .service-lead,
+  .service-detail-content p:not(.service-kicker):not(.service-lead) {
+    font-size: 1rem;
+  }
+
+  .service-detail-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .service-detail-card p {
+    font-size: 1rem;
+  }
+}
