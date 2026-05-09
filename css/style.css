@@ -487,4 +487,15 @@ a {
   .cta-text {
     font-size: 1rem;
   }
+
+  /* supplier section */
+  .supplier-logo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .supplier-logo img {
+    max-width: 9rem;
+    height: 4rem;
+  }
 }
