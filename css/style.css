@@ -263,7 +263,7 @@ a {
 }
 
 .hero-callout {
-  max-width: 20%;
+  max-width: min(24rem, 92%);
   padding: 1rem 1.2rem;
   border-radius: var(--radius);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -283,7 +283,6 @@ a {
    Intro - Section
    ========================================================== */
 .intro {
-  padding-top: 5vh;
   padding-bottom: 3vh;
 }
 
