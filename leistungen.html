@@ -6,25 +6,81 @@
     <title>Elektro Lumi GmbH</title>
     <link rel="icon" href="assets/icons/logo.svg" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/leistungen.css" />
   </head>
 
   <body>
-    <header>
-      <nav class="navbar" aria-label="Hauptnavigation">
-        <div class="navbar-inner wrap">
-          <a href="index.html" class="logo">
-            <img src="assets/icons/logo.svg" alt="Elektro Lumi Logo" />
-          </a>
-          <ul class="nav-links">
-            <li><a href="leistungen.html" class="nav-item">Leistungen</a></li>
-            <li><a href="objects.html" class="nav-item">Referenzen</a></li>
-            <li><a href="kontakt.html" class="nav-item">Kontakt</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    <!-- header injection -->
+    <header id="main-header"></header>
+
     <main>
-      <h1>Leistungen werden hier aufgelistet</h1>
+      <section class="services-page">
+        <div class="wrap">
+          <h1 class="section-title">Was wir anbieten...</h1>
+
+          <section class="service-detail elektroinstallationen">
+            <div class="service-detail-content">
+              <p class="service-kicker">Unsere Leistungen</p>
+
+              <h2>Elektroinstallationen</h2>
+
+              <p class="service-lead">
+                Von Umbau bis Neubau, von der kleinen Wohnung bis zum ganzen
+                Wohnblock: Wir planen und realisieren Elektroinstallationen
+                transparent, sauber und zuverlässig.
+              </p>
+
+              <p>
+                Ob Steckdosen, Schalter, Beleuchtung, Verteilungen oder komplexe
+                Installationen: Wir unterstützen Sie von der ersten Idee bis zur
+                fertigen Umsetzung.
+              </p>
+            </div>
+
+            <div class="service-detail-list">
+              <article class="service-detail-card">
+                <h3>Neubau & Umbau</h3>
+                <p>
+                  Elektroinstallationen für Wohnungen, Einfamilienhäuser,
+                  Mehrfamilienhäuser und Gewerberäume.
+                </p>
+              </article>
+
+              <article class="service-detail-card">
+                <h3>Steckdosen & Schalter</h3>
+                <p>
+                  Installation von Steckdosen, Schalterkombinationen,
+                  Raumthermostaten und Storensteuerungen.
+                </p>
+              </article>
+
+              <article class="service-detail-card">
+                <h3>Beleuchtung</h3>
+                <p>
+                  Montage von LED-Leuchten, Spots, Aussenleuchten und
+                  individuellen Lichtlösungen.
+                </p>
+              </article>
+
+              <article class="service-detail-card">
+                <h3>Verteilungen</h3>
+                <p>
+                  Aufbau, Anpassung und Erweiterung von Haupt- und
+                  Unterverteilungen.
+                </p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
     </main>
+
+    <!-- footer injection -->
+    <footer id="footer"></footer>
+
+    <!-- header script -->
+    <script src="js/ham-menu-loader.js"></script>
+    <script src="js/header-loader.js"></script>
+    <script src="js/footer-loader.js"></script>
   </body>
 </html>
