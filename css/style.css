@@ -32,17 +32,17 @@ a {
    Wrapper: gleicher seitlicher Abstand überall
    ========================================================== */
 .wrap {
-  padding-inline: 5vw;
+  padding-inline: 3vw;
 }
 
 /* ==========================================================
    General Section Styling
    ========================================================== */
 .section-title {
-  font-size: 2rem;
+  font-size: 2.1vw;
   line-height: 1.15;
   color: var(--tertiary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* ==========================================================
@@ -54,7 +54,8 @@ a {
 
 .services-grid {
   display: grid;
-  gap: 1.2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
 }
 
 .service-card {
@@ -74,13 +75,13 @@ a {
 
 .service-card h3 {
   color: var(--primary);
-  font-size: 1.1rem;
+  font-size: 1.2vw;
   margin-bottom: 0.5rem;
 }
 
 .service-card p {
   color: rgba(15, 23, 42, 0.72);
-  font-size: 1rem;
+  font-size: 1vw;
 }
 
 /* ==========================================================
@@ -98,20 +99,22 @@ a {
   );
   color: #fff;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   display: grid;
+  grid-template-columns: 1fr auto;
   gap: 1rem;
   align-items: center;
 }
 
 .cta-title {
-  font-size: 1.5rem;
+  font-size: 1.7vw;
   margin-bottom: 0.35rem;
 }
 
 .cta-text {
   color: rgba(255, 255, 255, 0.88);
   max-width: 60ch;
+  font-size: 1vw;
 }
 
 .cta-button {
@@ -121,7 +124,8 @@ a {
   color: var(--tertiary);
   text-decoration: none;
   font-weight: 700;
-  padding: 0.8rem 1.1rem;
+  font-size: 1vw;
+  padding: 0.9rem 1.2rem;
   border-radius: 0.7rem;
 }
 
@@ -142,11 +146,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 1.2vh;
+  padding-block: 1vh;
 }
 
 .logo img {
-  height: 8vw;
+  height: 5.7vw;
   width: auto;
 }
 
@@ -154,7 +158,7 @@ a {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 4vw;
+  gap: 2.1vw;
 }
 
 .nav-item {
@@ -162,7 +166,7 @@ a {
   text-decoration: none;
   color: var(--primary);
   font-weight: 650;
-  font-size: 3.8vw;
+  font-size: 1.2vw;
   letter-spacing: 0.01em;
   padding: 0.55rem 0.8rem;
   border-radius: 0.6rem;
@@ -220,20 +224,18 @@ a {
    ========================================================== */
 .hero {
   position: relative;
-  height: 45vh;
+  height: 75vh;
   background: #0b1f2a;
-}
-
-.hero-media {
-  position: absolute;
-  inset: 0;
+  overflow: hidden;
 }
 
 .hero-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  z-index: 0;
 }
 
 .hero::before {
@@ -241,7 +243,6 @@ a {
   position: absolute;
   inset: 0;
   z-index: 1;
-  pointer-events: none;
   background: linear-gradient(
     90deg,
     rgba(11, 31, 42, 0.55) 0%,
@@ -260,7 +261,7 @@ a {
 }
 
 .hero-callout {
-  max-width: 32rem;
+  max-width: 24rem;
   padding: 1rem 1.2rem;
   border-radius: 0.85rem;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -271,7 +272,7 @@ a {
 }
 
 .hero-callout-title {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.35;
 }
@@ -280,11 +281,11 @@ a {
    Intro
    ========================================================== */
 .intro {
-  padding-block: 5vh;
+  padding-block: 5vh 3vh;
 }
 
 .intro-title {
-  font-size: 6vw;
+  font-size: 2.2vw;
   letter-spacing: 0.005em;
   line-height: 1.15;
   color: var(--tertiary);
@@ -292,95 +293,9 @@ a {
 }
 
 .intro-text {
-  font-size: 4vw;
+  font-size: 1.1vw;
   color: rgba(15, 23, 42, 0.72);
   max-width: 62ch;
-}
-
-/* ==========================================================
-   Desktop (ab 768px – iPad Mini aufwärts)
-   ========================================================== */
-@media (min-width: 768px) {
-  .wrap {
-    padding-inline: 3vw;
-  }
-
-  .navbar-inner {
-    padding-block: 1vh;
-  }
-
-  .logo img {
-    height: 5.7vw;
-  }
-
-  .nav-links {
-    gap: 2.1vw;
-  }
-
-  .nav-item {
-    font-size: 1.2vw;
-  }
-
-  .hero {
-    height: 55vh;
-  }
-
-  .hero-callout {
-    max-width: 24rem;
-    padding: 1rem 1.2rem;
-  }
-
-  .hero-callout-title {
-    font-size: 1.05rem;
-  }
-
-  .intro {
-    padding-block: 5vh 3vh;
-  }
-
-  .intro-title {
-    font-size: 2.2vw;
-  }
-
-  .intro-text {
-    font-size: 1.1vw;
-  }
-
-  .section-title {
-    font-size: 2.1vw;
-    margin-bottom: 2rem;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.3rem;
-  }
-
-  .service-card h3 {
-    font-size: 1.2vw;
-  }
-
-  .service-card p {
-    font-size: 1vw;
-  }
-
-  .cta-box {
-    grid-template-columns: 1fr auto;
-    padding: 2rem;
-  }
-
-  .cta-title {
-    font-size: 1.7vw;
-  }
-
-  .cta-text {
-    font-size: 1vw;
-  }
-
-  .cta-button {
-    font-size: 1vw;
-    padding: 0.9rem 1.2rem;
-  }
 }
 
 /* ==========================================================
@@ -395,13 +310,16 @@ a {
     display: none;
   }
 
-  /* --------------------------------------------------------
-     Hamburger Button
-     -------------------------------------------------------- */
+  .navbar .logo img {
+    height: 8vh;
+    width: auto;
+  }
+
+  /*--- Hamburger Button ---*/
   .ham-menu {
     display: block;
     position: relative;
-    height: 50px;
+    height: 40px;
     width: 50px;
     margin-left: auto;
     cursor: pointer;
@@ -413,7 +331,7 @@ a {
     top: 50%;
     left: 50%;
     height: 4px;
-    width: 80%;
+    width: 70%;
     background-color: var(--primary);
     border-radius: 25px;
     transform: translate(-50%, -50%);
@@ -442,9 +360,7 @@ a {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
-  /* --------------------------------------------------------
-     Slide-In Panel
-     -------------------------------------------------------- */
+  /*--- Slide-In Panel ---*/
   .off-screen-menu {
     display: block;
     position: fixed;
@@ -474,6 +390,7 @@ a {
 
   .off-screen-menu .nav-item {
     color: #fff;
+    font-size: 2vh;
   }
 
   .footer-inner {
@@ -488,7 +405,7 @@ a {
   }
 
   .hero {
-    height: 35vh;
+    height: 40vh;
   }
 
   .hero-inner {
@@ -497,7 +414,7 @@ a {
   }
 
   .hero-callout {
-    max-width: 78%;
+    max-width: 75%;
     padding: 0.9rem 1rem;
   }
 
@@ -505,8 +422,35 @@ a {
     font-size: 1rem;
   }
 
+  .intro-title {
+    font-size: 6vw;
+  }
+
   .section-title {
     font-size: 1.6rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .cta-box {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.1rem;
   }
 
   .intro-text,
