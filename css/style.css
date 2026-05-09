@@ -4,6 +4,7 @@
   --tertiary: rgba(20, 65, 96, 1);
   --background-color: #f5f6fc;
   --footer-background: #334e68;
+  --radius: 9px;
 }
 
 * {
@@ -61,7 +62,7 @@ a {
 .service-card {
   background: #fff;
   border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 1rem;
+  border-radius: var(--radius);
   padding: 1.3rem;
   box-shadow: 0 0.5rem 1.2rem rgba(15, 23, 42, 0.05);
 }
@@ -88,17 +89,18 @@ a {
    Contact Section
    ========================================================== */
 .cta {
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .cta-box {
   background: linear-gradient(
     135deg,
-    rgba(20, 65, 96, 1),
-    rgba(29, 95, 140, 1)
+    rgba(20, 65, 96, 0.9),
+    rgba(29, 95, 140, 0.9)
   );
   color: #fff;
-  border-radius: 1rem;
+  border-radius: var(--radius);
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -126,7 +128,7 @@ a {
   font-weight: 700;
   font-size: 1vw;
   padding: 0.9rem 1.2rem;
-  border-radius: 0.7rem;
+  border-radius: var(--radius);
 }
 
 .cta-button:hover {
@@ -169,7 +171,7 @@ a {
   font-size: 1.2vw;
   letter-spacing: 0.01em;
   padding: 0.55rem 0.8rem;
-  border-radius: 0.6rem;
+  border-radius: var(--radius);
   transition:
     background-color 0.2s ease,
     color 0.2s ease;
@@ -263,7 +265,7 @@ a {
 .hero-callout {
   max-width: 24rem;
   padding: 1rem 1.2rem;
-  border-radius: 0.85rem;
+  border-radius: var(--radius);
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(30, 90, 115, 0.28);
   backdrop-filter: blur(6px);
@@ -278,10 +280,11 @@ a {
 }
 
 /* ==========================================================
-   Intro
+   Intro - Section
    ========================================================== */
 .intro {
-  padding-block: 5vh 3vh;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
 }
 
 .intro-title {
@@ -296,6 +299,32 @@ a {
   font-size: 1.1vw;
   color: rgba(15, 23, 42, 0.72);
   max-width: 62ch;
+}
+
+/* ==========================================================
+   Supplier - Section
+   ========================================================== */
+.supplier {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.supplier-logo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5rem;
+  align-items: center;
+}
+
+.supplier-logo a {
+  display: block;
+  text-decoration: none;
+}
+
+.supplier-logo img {
+  width: 100%;
+  height: 7rem;
+  object-fit: contain;
 }
 
 /* ==========================================================
@@ -372,7 +401,7 @@ a {
     padding: 1.2rem;
     background-color: var(--primary);
     opacity: 0.9;
-    border-radius: 0.9rem 0 0 0.9rem;
+    border-radius: var(--radius) 0 0 var(--radius);
     box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.24);
     overflow-y: auto;
     transform: translateX(110%);
