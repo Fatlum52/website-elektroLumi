@@ -1,6 +1,5 @@
 /* ==========================================================
-   Leistungen Seite
-   Default: Desktop
+   styling for leistungen.html
    ========================================================== */
 
 /* Hero */
@@ -8,14 +7,14 @@
   padding-block: 4rem 3rem;
 }
 
-.leistungen-hero .wrap {
+.leistungen-hero {
   max-width: 1200px;
 }
 
 .eyebrow {
   margin-bottom: 0.8rem;
   color: var(--secondary);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -24,20 +23,21 @@
 .leistungen-hero h1 {
   margin-bottom: 1rem;
   color: var(--tertiary);
-  font-size: 4.2vw;
+  font-size: 3.7vw;
   line-height: 1.05;
 }
 
 .leistungen-hero p {
   max-width: 820px;
   color: rgba(15, 23, 42, 0.72);
-  font-size: 1.25vw;
+  font-size: 1.15vw;
   line-height: 1.65;
 }
 
 /* Übersicht */
 .leistungen-overview {
-  padding-block: 1rem 5rem;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
 }
 
 .leistungen-grid {
@@ -53,7 +53,7 @@
   min-height: 100%;
   background: #fff;
   border: 1px solid rgba(15, 23, 42, 0.07);
-  border-radius: 1.2rem;
+  border-radius: var(--radius);
   box-shadow: 0 0.8rem 1.8rem rgba(15, 23, 42, 0.06);
 }
 
