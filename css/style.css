@@ -138,10 +138,19 @@ a {
 /* ==========================================================
    Navbar
    ========================================================== */
+/* Reserve the navbar's height before the header is injected, so the page
+   doesn't jump on load. Matches the rendered navbar height (logo + padding). */
+#main-header {
+  display: block;
+  min-height: calc(5.7vw + 2vh);
+}
+
 .navbar {
   position: sticky;
   top: 0;
   z-index: 50;
+  background: var(--background-color);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
 }
 
 .navbar-inner {
@@ -343,6 +352,10 @@ a {
 @media (max-width: 480px) {
   .wrap {
     padding-inline: 4.5vw;
+  }
+
+  #main-header {
+    min-height: calc(8vh + 2vh);
   }
 
   .navbar .nav-links {
