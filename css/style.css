@@ -191,6 +191,32 @@ a {
   color: #fff;
 }
 
+/* Current page: primary underline (white on hover / in the mobile menu). */
+.nav-item.active {
+  position: relative;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  left: 0.8rem;
+  right: 0.8rem;
+  bottom: 0.25rem;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+/* Kontakt call-to-action: filled button that stands out from the text links. */
+.nav-item.nav-cta {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.nav-item.nav-cta:hover {
+  background-color: var(--tertiary);
+}
+
 /* styling of hamburger menu in media query */
 .ham-menu,
 .off-screen-menu {
@@ -443,6 +469,12 @@ a {
   .off-screen-menu .nav-item {
     color: #fff;
     font-size: 2vh;
+  }
+
+  /* Invert the CTA inside the dark mobile menu so it still pops. */
+  .off-screen-menu .nav-item.nav-cta {
+    background-color: #fff;
+    color: var(--primary);
   }
 
   .footer-inner {
