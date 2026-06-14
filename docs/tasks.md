@@ -18,6 +18,16 @@ Active work items for the Elektro Lumi website. See `progress.md` for the sessio
 - [ ] **Image compression** — downscale/compress the 4–6 MB photos (≈10× smaller,
   visually lossless) after approving a one-image before/after sample.
 
+## Done
+
+- [x] **Impressum** (`impressum.html`) — Firmenangaben, UID `CHE-113.204.558`,
+  Geschäftsführer Hashim Cikaqi, Haftungsausschluss & Urheberrecht.
+- [x] **Datenschutzerklärung** (`dataintegrity.html`) — revDSG/DSGVO, Hinweis auf
+  Versand via Web3Forms, hCaptcha, inkl. Icon-Credits.
+- [x] **Kontaktformular** (`kontakt.html`) — text-only, Versand via Web3Forms (AJAX)
+  mit Honeypot + hCaptcha; Erfolg leitet auf `thank-you.html`. Felder: Firma, Name,
+  E-Mail, Telefon, Objekt, Objektort, Nachricht. Test-Key für `dondraper52@hotmail.com`.
+
 ## Future
 
 - Per-project Referenzen sections beyond `boni/` — each with title, short
