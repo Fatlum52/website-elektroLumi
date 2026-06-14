@@ -3,17 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elektro Lumi GmbH</title>
+    <title>Kontakt – Elektro Lumi GmbH</title>
     <link rel="icon" href="assets/icons/logo.svg" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/kontakt.css" />
   </head>
 
   <body>
     <!-- header injection -->
     <header id="main-header"></header>
 
-    <main>
-      <h1>Kontaktformular wird hier erstellt</h1>
+    <main class="wrap kontakt">
+      <section class="kontakt-intro">
+        <p class="eyebrow">Elektro Lumi GmbH</p>
+        <h1>Kontakt</h1>
+        <p>
+          Schreiben Sie uns Ihr Anliegen. Wir melden uns so rasch wie möglich
+          bei Ihnen zurück.
+        </p>
+      </section>
+
+      <!--
+        Web3Forms: leitet die Übermittlung als E-Mail weiter.
+        Der access_key gehört zu dondraper52@hotmail.com (TEST) – für die
+        Produktion einen neuen Key für info@elektrolumi.ch generieren.
+      -->
+      <form id="kontakt-form" class="kontakt-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="28be8249-52c5-4742-98cb-3db481992554" />
+        <input type="hidden" name="subject" value="Neue Anfrage über elektrolumi.ch" />
+        <input type="hidden" name="from_name" value="elektrolumi.ch Kontaktformular" />
+        <!-- Honeypot-Spamfalle (Web3Forms): für Menschen unsichtbar -->
+        <input type="checkbox" name="botcheck" class="kontakt-honey" tabindex="-1" autocomplete="off" />
+
+        <div class="form-field">
+          <label for="firma">Firma <span class="optional">(optional)</span></label>
+          <input type="text" id="firma" name="Firma" autocomplete="organization" />
+        </div>
+
+        <div class="form-field">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="Name" autocomplete="name" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="form-field">
+            <label for="telefon">Telefon <span class="optional">(optional)</span></label>
+            <input type="tel" id="telefon" name="Telefon" autocomplete="tel" />
+          </div>
+        </div>
+
+        <fieldset class="form-objekt">
+          <legend>Objekt</legend>
+          <div class="form-field">
+            <label for="objekt">Objekt</label>
+            <input type="text" id="objekt" name="Objekt" placeholder="z. B. Mehrfamilienhaus, Wohnung" />
+          </div>
+          <div class="form-field">
+            <label for="objektort">Objektort</label>
+            <input type="text" id="objektort" name="Objektort" />
+          </div>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="nachricht">Nachricht *</label>
+          <textarea id="nachricht" name="Nachricht" rows="6" required></textarea>
+        </div>
+
+        <!-- Spam-Schutz: hCaptcha (Web3Forms-Proxy, kein eigener Sitekey nötig) -->
+        <div class="h-captcha" data-captcha="true" data-lang="de"></div>
+
+        <button type="submit" class="kontakt-submit">Anfrage senden</button>
+
+        <p id="kontakt-result" class="kontakt-result" role="status" aria-live="polite"></p>
+      </form>
     </main>
 
     <!-- footer injection -->
@@ -23,5 +89,9 @@
     <script src="js/ham-menu-loader.js"></script>
     <script src="js/header-loader.js"></script>
     <script src="js/footer-loader.js"></script>
+
+    <!-- Web3Forms client (rendert hCaptcha) + Formular-Logik -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="js/kontakt-form.js"></script>
   </body>
 </html>

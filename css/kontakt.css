@@ -1,0 +1,231 @@
+/* ==========================================================
+   styling for kontakt.html
+   ========================================================== */
+
+.kontakt {
+  max-width: 820px;
+  margin-inline: auto;
+  padding-block: 4rem 5rem;
+}
+
+/* Intro */
+.kontakt-intro {
+  margin-bottom: 2rem;
+}
+
+.kontakt-intro h1 {
+  margin-bottom: 1rem;
+  color: var(--tertiary);
+  font-size: 3.7vw;
+  line-height: 1.05;
+}
+
+.kontakt-intro p {
+  max-width: 60ch;
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 1.15vw;
+  line-height: 1.65;
+}
+
+/* Card */
+.kontakt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius);
+  box-shadow: 0 0.8rem 1.8rem rgba(15, 23, 42, 0.06);
+}
+
+/* Honeypot: für Menschen unsichtbar, Bots füllen es aus */
+.kontakt-honey {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Felder */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  color: var(--tertiary);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.form-field .optional {
+  color: rgba(15, 23, 42, 0.5);
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 0.75rem 0.9rem;
+  font: inherit;
+  color: var(--primary);
+  background: var(--background-color);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: var(--radius);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(29, 95, 140, 0.15);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+/* hCaptcha-Widget */
+.h-captcha {
+  margin-block: 0.2rem;
+}
+
+/* Status-/Fehlermeldung */
+.kontakt-result {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
+
+.kontakt-result:empty {
+  display: none;
+}
+
+.kontakt-result.is-error {
+  color: #c0392b;
+}
+
+/* Objekt-Gruppe */
+.form-objekt {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 1.3rem;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: var(--radius);
+}
+
+.form-objekt legend {
+  padding-inline: 0.5rem;
+  color: var(--secondary);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Submit */
+.kontakt-submit {
+  margin-top: 0.5rem;
+  padding: 0.95rem 1.2rem;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.kontakt-submit:hover {
+  background: var(--tertiary);
+}
+
+/* ==========================================================
+   Danke-Seite (thank-you.html)
+   ========================================================== */
+.thankyou {
+  max-width: 640px;
+  margin-inline: auto;
+  padding-block: 5rem 6rem;
+  text-align: center;
+}
+
+.thankyou h1 {
+  margin-bottom: 1rem;
+  color: var(--tertiary);
+  font-size: 3.2vw;
+  line-height: 1.1;
+}
+
+.thankyou p {
+  margin-inline: auto;
+  max-width: 50ch;
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 1.15vw;
+  line-height: 1.65;
+}
+
+.thankyou-back {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 1.4rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--primary);
+  border-radius: var(--radius);
+  transition: background 0.2s ease;
+}
+
+.thankyou-back:hover {
+  background: var(--tertiary);
+}
+
+/* ==========================================================
+   Phone bis 480px
+   ========================================================== */
+
+@media (max-width: 480px) {
+  .kontakt {
+    padding-block: 2.5rem 4rem;
+  }
+
+  .kontakt-intro h1 {
+    font-size: 2.4rem;
+  }
+
+  .kontakt-intro p {
+    font-size: 1rem;
+  }
+
+  .kontakt-form {
+    padding: 1.4rem;
+    border-radius: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .thankyou {
+    padding-block: 3rem 4rem;
+  }
+
+  .thankyou h1 {
+    font-size: 2.2rem;
+  }
+
+  .thankyou p {
+    font-size: 1rem;
+  }
+}
