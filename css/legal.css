@@ -1,0 +1,84 @@
+/* ==========================================================
+   styling for impressum.html & dataintegrity.html
+   ========================================================== */
+
+.legal {
+  max-width: 820px;
+  margin-inline: auto;
+  padding-block: 4rem 5rem;
+}
+
+.legal h1 {
+  margin-bottom: 1.5rem;
+  color: var(--tertiary);
+  font-size: 3.2vw;
+  line-height: 1.1;
+}
+
+.legal h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 0.6rem;
+  color: var(--primary);
+  font-size: 1.5vw;
+  line-height: 1.25;
+}
+
+.legal h3 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
+  color: var(--secondary);
+  font-size: 1.1vw;
+}
+
+.legal p,
+.legal li {
+  color: rgba(15, 23, 42, 0.78);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.legal p {
+  margin-bottom: 0.8rem;
+  max-width: 70ch;
+}
+
+.legal ul {
+  margin: 0 0 0.8rem 1.2rem;
+}
+
+.legal a {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+.legal .legal-meta {
+  margin-bottom: 0.2rem;
+}
+
+.legal .legal-stand {
+  margin-top: 2.5rem;
+  color: rgba(15, 23, 42, 0.55);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================
+   Phone bis 480px
+   ========================================================== */
+
+@media (max-width: 480px) {
+  .legal {
+    padding-block: 2.5rem 4rem;
+  }
+
+  .legal h1 {
+    font-size: 2.2rem;
+  }
+
+  .legal h2 {
+    font-size: 1.3rem;
+  }
+
+  .legal h3 {
+    font-size: 1.05rem;
+  }
+}
