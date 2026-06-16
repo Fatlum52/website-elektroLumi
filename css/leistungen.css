@@ -4,11 +4,8 @@
 
 /* Hero */
 .leistungen-hero {
-  padding-block: 4rem 3rem;
-}
-
-.leistungen-hero {
   max-width: 1200px;
+  padding-block: 4rem 3rem;
 }
 
 .eyebrow {
