@@ -12,7 +12,7 @@ Active work items for the Elektro Lumi website. See `progress.md` for the sessio
 - [ ] **Kontakt CTA** — make the Kontakt nav link a filled, outstanding button.
 - [ ] **Back-to-top arrow** — clickable arrow under the footer logo that
   smooth-scrolls to the top of the page.
-- [ ] **Referenzen page** (`objects.html`) — card-free masonry gallery of project
+- [ ] **Referenzen page** (`referenzen.html`) — card-free masonry gallery of project
   photos with a click-to-enlarge lightbox. Curated `boni/` project section
   (Mehrfamilienhaus Hunzenschwil) + a "Weitere Arbeiten" gallery of the loose photos.
 - [ ] **Image compression** — downscale/compress the 4–6 MB photos (≈10× smaller,
@@ -32,7 +32,7 @@ Active work items for the Elektro Lumi website. See `progress.md` for the sessio
 
 - Per-project Referenzen sections beyond `boni/` — each with title, short
   description, and many photos (e.g. "Mehrfamilienhaus Hunzenschwil").
-- Optional: rename `objects.html` → `referenzen.html` (touches the nav href).
+- Optional: rename `referenzen.html` → `referenzen.html` (touches the nav href).
 - Optional: shrink `.git` history (past heavy images) if the repo needs to be lean
   for cloud/teleport — destructive, do separately.
 
