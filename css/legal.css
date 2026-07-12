@@ -82,3 +82,20 @@
     font-size: 1.05rem;
   }
 }
+
+/* ==========================================================
+   Tablet (481px – 1024px)
+   ========================================================== */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .legal h1 {
+    font-size: 2.4rem;
+  }
+
+  .legal h2 {
+    font-size: 1.35rem;
+  }
+
+  .legal h3 {
+    font-size: 1.1rem;
+  }
+}

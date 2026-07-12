@@ -138,3 +138,32 @@
     font-size: 0.88rem;
   }
 }
+
+/* ==========================================================
+   Tablet (481px – 1024px)
+   ========================================================== */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .leistungen-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .leistungen-hero p {
+    font-size: 1.05rem;
+  }
+
+  .leistungen-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .leistung-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .leistung-card p {
+    font-size: 1rem;
+  }
+
+  .leistung-card li {
+    font-size: 0.85rem;
+  }
+}

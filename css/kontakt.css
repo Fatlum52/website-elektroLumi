@@ -229,3 +229,24 @@
     font-size: 1rem;
   }
 }
+
+/* ==========================================================
+   Tablet (481px – 1024px)
+   ========================================================== */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .kontakt-intro h1 {
+    font-size: 2.6rem;
+  }
+
+  .kontakt-intro p {
+    font-size: 1.05rem;
+  }
+
+  .thankyou h1 {
+    font-size: 2.4rem;
+  }
+
+  .thankyou p {
+    font-size: 1.05rem;
+  }
+}

@@ -232,3 +232,24 @@ body.lightbox-open {
     right: 0.5rem;
   }
 }
+
+/* ==========================================================
+   Tablet (481px – 1024px)
+   ========================================================== */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .ref-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .ref-hero p {
+    font-size: 1.05rem;
+  }
+
+  .ref-project h2 {
+    font-size: 1.6rem;
+  }
+
+  .ref-project-desc {
+    font-size: 1rem;
+  }
+}

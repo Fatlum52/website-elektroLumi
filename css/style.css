@@ -592,3 +592,84 @@ a {
     height: 4rem;
   }
 }
+
+/* ==========================================================
+   Tablet (481px – 1024px)
+   ========================================================== */
+@media (min-width: 481px) and (max-width: 1024px) {
+  #main-header {
+    min-height: 4.8rem;
+  }
+
+  .logo img {
+    height: 3.8rem;
+  }
+
+  .nav-links {
+    gap: 1.1rem;
+  }
+
+  .nav-item {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .intro-title {
+    font-size: 1.9rem;
+  }
+
+  .intro-text {
+    font-size: 1.05rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-text,
+  .cta-button {
+    font-size: 1rem;
+  }
+
+  .supplier-logo {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .supplier-logo img {
+    height: 5rem;
+  }
+
+  /* Footer als 2×2-Raster statt gequetschter Einzeiler */
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 3rem;
+  }
+
+  /* Block nur so breit wie das Logo, Inhalt zentriert → Pfeil sitzt
+     horizontal mittig unter dem Haus (wie im Phone-Modus). */
+  .footer-brand {
+    width: fit-content;
+  }
+
+  .footer .logo img {
+    height: 5rem;
+  }
+}
