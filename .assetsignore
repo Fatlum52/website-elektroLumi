@@ -1,0 +1,11 @@
+# Nur relevant bei Cloudflare Workers Static Assets:
+# hält Git-Interna und Entwickler-Dateien aus dem Upload (verhindert u. a.
+# den "Asset too large"-Fehler durch das grosse .git-Verzeichnis).
+# Cloudflare Pages ignoriert diese Datei – sie schadet dort nicht.
+.git
+.github
+.idea
+.cursor
+docs
+*.md
+ideen.txt
