@@ -20,6 +20,17 @@
   und führt die Icon-Credits. (Vorher kurz auf FormSubmit.co geplant, dann auf
   Web3Forms gewechselt.)
 
+### 12-07-2026
+
+- Updated: `referenzen.html` – neues Eigenprojekt „Zahnarztpraxis" ergänzt
+  (zwischen „Mehrfamilienhaus Hunzenschwil" und „Weitere Arbeiten").
+- Notes: Bestehende `.ref-project`/`.ref-gallery`-Struktur von Hunzenschwil
+  1:1 wiederverwendet (kein neues CSS). 11 Bilder aus
+  `assets/images/zahnarztpraxis/` mit Titel, Beschrieb und Bildunterschriften
+  eingebunden. Projekt: kompletter Umbau, Elektroinstallation mit
+  BTicino-Material vom Einlegen bis zur fertigen Installation, plus
+  Internet-Leitungen in die darüberliegende Wohnung mit Rack-Aufbau.
+
 ### DD-MM-YYY
 
 - Created:
