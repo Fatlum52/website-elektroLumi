@@ -28,30 +28,74 @@
         Der access_key gehört zu dondraper52@hotmail.com (TEST) – für die
         Produktion einen neuen Key für info@elektrolumi.ch generieren.
       -->
-      <form id="kontakt-form" class="kontakt-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="28be8249-52c5-4742-98cb-3db481992554" />
-        <input type="hidden" name="subject" value="Neue Anfrage über elektrolumi.ch" />
-        <input type="hidden" name="from_name" value="elektrolumi.ch Kontaktformular" />
+      <form
+        id="kontakt-form"
+        class="kontakt-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="922a542d-a251-44e9-8042-786179938a63"
+        />
+        <input
+          type="hidden"
+          name="subject"
+          value="Neue Anfrage über elektrolumi.ch"
+        />
+        <input
+          type="hidden"
+          name="from_name"
+          value="elektrolumi.ch Kontaktformular"
+        />
         <!-- Honeypot-Spamfalle (Web3Forms): für Menschen unsichtbar -->
-        <input type="checkbox" name="botcheck" class="kontakt-honey" tabindex="-1" autocomplete="off" />
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="kontakt-honey"
+          tabindex="-1"
+          autocomplete="off"
+        />
 
         <div class="form-field">
-          <label for="firma">Firma <span class="optional">(optional)</span></label>
-          <input type="text" id="firma" name="Firma" autocomplete="organization" />
+          <label for="firma"
+            >Firma <span class="optional">(optional)</span></label
+          >
+          <input
+            type="text"
+            id="firma"
+            name="Firma"
+            autocomplete="organization"
+          />
         </div>
 
         <div class="form-field">
           <label for="name">Name *</label>
-          <input type="text" id="name" name="Name" autocomplete="name" required />
+          <input
+            type="text"
+            id="name"
+            name="Name"
+            autocomplete="name"
+            required
+          />
         </div>
 
         <div class="form-row">
           <div class="form-field">
             <label for="email">E-Mail *</label>
-            <input type="email" id="email" name="email" autocomplete="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
           </div>
           <div class="form-field">
-            <label for="telefon">Telefon <span class="optional">(optional)</span></label>
+            <label for="telefon"
+              >Telefon <span class="optional">(optional)</span></label
+            >
             <input type="tel" id="telefon" name="Telefon" autocomplete="tel" />
           </div>
         </div>
@@ -60,7 +104,12 @@
           <legend>Objekt</legend>
           <div class="form-field">
             <label for="objekt">Objekt</label>
-            <input type="text" id="objekt" name="Objekt" placeholder="z. B. Mehrfamilienhaus, Wohnung" />
+            <input
+              type="text"
+              id="objekt"
+              name="Objekt"
+              placeholder="z. B. Mehrfamilienhaus, Wohnung"
+            />
           </div>
           <div class="form-field">
             <label for="objektort">Objektort</label>
@@ -70,7 +119,12 @@
 
         <div class="form-field">
           <label for="nachricht">Nachricht *</label>
-          <textarea id="nachricht" name="Nachricht" rows="6" required></textarea>
+          <textarea
+            id="nachricht"
+            name="Nachricht"
+            rows="6"
+            required
+          ></textarea>
         </div>
 
         <!-- Spam-Schutz: hCaptcha (Web3Forms-Proxy, kein eigener Sitekey nötig) -->
@@ -78,7 +132,12 @@
 
         <button type="submit" class="kontakt-submit">Anfrage senden</button>
 
-        <p id="kontakt-result" class="kontakt-result" role="status" aria-live="polite"></p>
+        <p
+          id="kontakt-result"
+          class="kontakt-result"
+          role="status"
+          aria-live="polite"
+        ></p>
       </form>
     </main>
 
