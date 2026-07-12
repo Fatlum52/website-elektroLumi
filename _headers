@@ -5,9 +5,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Permissions-Policy: geolocation=(), microphone=(), camera=()
-
-# Optionale Content-Security-Policy. Erst aktivieren (Kommentarzeichen am
-# Zeilenanfang entfernen) und danach das Kontaktformular testen – hCaptcha und
-# Web3Forms müssen weiterhin funktionieren.
-#/*
-Content-Security-Policy: default-src 'self'; script-src 'self' https://web3forms.com https://hcaptcha.com https://*.hcaptcha.com; style-src 'self' 'unsafe-inline' https://hcaptcha.com https://*.hcaptcha.com; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src 'self' https://api.web3forms.com https://hcaptcha.com https://*.hcaptcha.com; img-src 'self' data: https:; font-src 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://web3forms.com https://hcaptcha.com https://*.hcaptcha.com; style-src 'self' 'unsafe-inline' https://hcaptcha.com https://*.hcaptcha.com; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src 'self' https://api.web3forms.com https://hcaptcha.com https://*.hcaptcha.com; img-src 'self' data: https:; font-src 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'
