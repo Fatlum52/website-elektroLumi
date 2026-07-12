@@ -50,6 +50,22 @@
   „TEST / dondraper52@hotmail.com", obwohl laut Git bereits auf Prod-Key
   gewechselt. (3) Kein Tablet-Breakpoint (481–1024px nutzt vw-Schriftgrössen).
 
+- Created: `_headers` – Security-Header für Cloudflare Pages
+  (X-Frame-Options, X-Content-Type-Options, Referrer-Policy, HSTS,
+  Permissions-Policy; optionale CSP als Kommentar, weil hCaptcha/Web3Forms
+  vor Aktivierung getestet werden müssen).
+- Updated: Tablet-Breakpoint `@media (min-width:481px) and (max-width:1024px)`
+  in `style.css`, `leistungen.css`, `referenzen.css`, `kontakt.css`,
+  `legal.css` – ersetzt die vw-Schriftgrössen durch feste rem-Werte und stellt
+  Grids auf 2–3 Spalten, damit Tablets nicht zu kleine Schrift zeigen.
+- Fixed: Stale Web3Forms-Kommentar in `kontakt.html` entfernt (Key ist Prod).
+- Updated: Tablet-Feinschliff in `style.css` – Navbar-/Footer-Logo grösser
+  (3.8rem bzw. 5rem), Footer als 2×2-Raster statt gequetschtem Einzeiler.
+  Services- und Leistungen-Grid im Tablet-Bereich zweispaltig.
+- Created: `404.html` (Fehlerseite im Seitenstil, noindex) und `_redirects` –
+  Zugriffe auf interne Dateien (`/docs/*`, `*.md`, `ideen.txt`) geben auf
+  Cloudflare Pages jetzt 404 zurück, statt den Inhalt preiszugeben.
+
 ### DD-MM-YYY
 
 - Created:
