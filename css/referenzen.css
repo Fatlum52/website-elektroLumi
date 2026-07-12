@@ -148,6 +148,38 @@
   background: rgba(255, 255, 255, 0.25);
 }
 
+/* Prev / next navigation */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-prev {
+  left: 1.3rem;
+}
+
+.lightbox-next {
+  right: 1.3rem;
+}
+
 /* Lock scroll behind the lightbox */
 body.lightbox-open {
   overflow: hidden;
@@ -184,5 +216,19 @@ body.lightbox-open {
 
   .ref-gallery figure {
     margin-bottom: 0.6rem;
+  }
+
+  .lightbox-nav {
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.7rem;
+  }
+
+  .lightbox-prev {
+    left: 0.5rem;
+  }
+
+  .lightbox-next {
+    right: 0.5rem;
   }
 }
