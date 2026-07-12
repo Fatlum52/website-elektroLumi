@@ -35,6 +35,21 @@
   jetzt per Pfeil-Buttons, Tastatur (←/→) oder Swipe geblättert werden
   (mit Umlauf); Bilder werden beim Öffnen aus der jeweiligen Galerie gesammelt.
 
+- Created: `robots.txt`, `sitemap.xml` (Basis-URL `https://www.elektrolumi.ch`).
+- Updated (SEO): Auf allen Seiten `meta description`, `canonical`, `theme-color`
+  und Open-Graph-/Twitter-Tags ergänzt. Titel von `index.html` und
+  `leistungen.html` mit Keywords (Elektroinstallationen, Brugg, Aargau) statt
+  generischem „Elektro Lumi GmbH". `index.html`: fehlendes `<h1>` ergänzt
+  (Hero-Callout ist jetzt `h1`) und `Electrician`-JSON-LD (LocalBusiness) mit
+  Adresse, UID und Einzugsgebiet eingebaut.
+- Fixed (Konsistenz): Favicon von `referenzen.html` auf `logo-footer3.svg`
+  vereinheitlicht (war `logo.svg`).
+- Notes: Offen/Empfehlungen – (1) Sicherheits-Header (CSP, X-Content-Type-Options,
+  Referrer-Policy, HSTS) auf Hosting-Ebene setzen (statische Seite, nicht in HTML
+  lösbar). (2) Stale Kommentar in `kontakt.html` prüfen: nennt Web3Forms-Key als
+  „TEST / dondraper52@hotmail.com", obwohl laut Git bereits auf Prod-Key
+  gewechselt. (3) Kein Tablet-Breakpoint (481–1024px nutzt vw-Schriftgrössen).
+
 ### DD-MM-YYY
 
 - Created:
