@@ -1,0 +1,6 @@
+# Cloudflare Pages – interne/Entwickler-Dateien nicht ausliefern.
+# Zugriffe auf diese Pfade geben die 404-Seite mit Status 404 zurück,
+# statt den Inhalt preiszugeben.
+/docs/*      /404.html   404
+/*.md        /404.html   404
+/ideen.txt   /404.html   404
