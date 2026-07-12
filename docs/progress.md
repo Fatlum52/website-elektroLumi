@@ -30,6 +30,10 @@
   eingebunden. Projekt: kompletter Umbau, Elektroinstallation mit
   BTicino-Material vom Einlegen bis zur fertigen Installation, plus
   Internet-Leitungen in die darüberliegende Wohnung mit Rack-Aufbau.
+- Updated: `js/lightbox.js`, `css/referenzen.css` – Lightbox mit
+  Vor-/Zurück-Navigation erweitert. Innerhalb der angeklickten Galerie kann
+  jetzt per Pfeil-Buttons, Tastatur (←/→) oder Swipe geblättert werden
+  (mit Umlauf); Bilder werden beim Öffnen aus der jeweiligen Galerie gesammelt.
 
 ### DD-MM-YYY
 
