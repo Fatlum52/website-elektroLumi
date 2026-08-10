@@ -47,7 +47,7 @@
 - Notes: Offen/Empfehlungen – (1) Sicherheits-Header (CSP, X-Content-Type-Options,
   Referrer-Policy, HSTS) auf Hosting-Ebene setzen (statische Seite, nicht in HTML
   lösbar). (2) Stale Kommentar in `kontakt.html` prüfen: nennt Web3Forms-Key als
-  „TEST / dondraper52@hotmail.com", obwohl laut Git bereits auf Prod-Key
+  „TEST / <dondraper52@hotmail.com>", obwohl laut Git bereits auf Prod-Key
   gewechselt. (3) Kein Tablet-Breakpoint (481–1024px nutzt vw-Schriftgrössen).
 
 - Created: `_headers` – Security-Header für Cloudflare Pages
@@ -65,6 +65,42 @@
 - Created: `404.html` (Fehlerseite im Seitenstil, noindex) und `_redirects` –
   Zugriffe auf interne Dateien (`/docs/*`, `*.md`, `ideen.txt`) geben auf
   Cloudflare Pages jetzt 404 zurück, statt den Inhalt preiszugeben.
+
+### 14-07-2026
+
+- Notes (Domain/DNS, keine Code-Änderung): Site läuft produktiv auf Cloudflare
+  Pages (`elektrolumi.pages.dev`). **DNS bleibt bei Hostpoint** (Nameserver
+  `ns`/`ns2`/`ns3.hostpoint.ch`) – bewusste Entscheidung: Hostpoint verwaltet
+  SPF, DKIM (3 Selektoren) und DMARC (`p=quarantine`) automatisch; ein
+  Nameserver-Umzug zu Cloudflare würde diese Pflege manuell auf uns übertragen
+  und bei einer DKIM-Rotation still brechen (Mail über `info@elektrolumi.ch`
+  ist geschäftskritisch).
+- Fixed: Apex `elektrolumi.ch` zeigte die **Hostpoint-Parking-Seite** statt der
+  Website. Ursache: In Hostpoint (Domains → `elektrolumi.ch` → Domain Status)
+  stand die Option auf „Weiterleiten auf die Hostpoint Domain Parking Website".
+  Umgestellt auf „Domain weiterleiten (HTTP Redirect) nach" →
+  `https://www.elektrolumi.ch`. Verifiziert: `http://elektrolumi.ch` liefert
+  jetzt `301 Moved Permanently` → `https://www.elektrolumi.ch` (kein
+  Frame/Cloaking). Kanonische Variante bleibt `www` – passend zu den
+  `canonical`-Tags und `sitemap.xml`.
+- Notes: DNS Anycast (Domain Shield) bei Hostpoint aktiviert. Unkritisch:
+  Nameserver-Namen, Zone, MX und DNSSEC unverändert; rein schnellere/robustere
+  DNS-Auflösung.
+- **Offen (1) – HTTPS auf dem Apex:** `https://elektrolumi.ch` antwortet nicht
+  (kein Zertifikat). Hostpoints Redirect-Service ist HTTP-only und es besteht
+  kein Hosting-Account, über den sich Let's Encrypt aktivieren liesse. Praktisch
+  unkritisch (Browser fallen bei getippter Domain auf HTTP zurück und folgen dem
+  301), aber direkte `https://elektrolumi.ch`-Links laufen ins Leere. Lösung
+  falls nötig: Nameserver zu Cloudflare (CNAME-Flattening auf dem Apex).
+  ⚠️ **Dabei zwingend zuerst DNSSEC bei Hostpoint deaktivieren** – sonst ist die
+  Domain nach dem NS-Wechsel inkl. Mail komplett unerreichbar.
+- **Offen (2) – Google-Indexierung:** Die Seite ist noch nicht auffindbar (auch
+  nicht für „elektrolumi"). Hat nichts mit DNS zu tun. Nächste Schritte, alle
+  kostenlos: Google Search Console einrichten (Property
+  `https://www.elektrolumi.ch`), `sitemap.xml` einreichen, Indexierung für
+  `index.html` beantragen; **Google Business Profile** anlegen (grösster Hebel
+  für lokale Suchen wie „Elektriker Brugg"). Realistisch 1–4 Wochen bis zum
+  Ranking auf den eigenen Markennamen.
 
 ### DD-MM-YYY
 

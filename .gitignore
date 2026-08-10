@@ -38,3 +38,6 @@ build/
 # Claude Code instructions (local only)
 CLAUDE.md
 .claude/
+
+# Docs
+docs/
