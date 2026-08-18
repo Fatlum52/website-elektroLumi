@@ -35,7 +35,7 @@
 
   <body>
     <header id="main-header">
-      <div class="off-screen-menu">
+      <div class="off-screen-menu" id="off-screen-menu">
         <ul class="nav-links">
           <li><a href="index.html" class="nav-item">Start</a></li>
           <li><a href="leistungen.html" class="nav-item">Leistungen</a></li>
@@ -56,11 +56,17 @@
             <li><a href="kontakt.html" class="nav-item nav-cta active" aria-current="page">Kontakt</a></li>
           </ul>
 
-          <div class="ham-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <button
+            type="button"
+            class="ham-menu"
+            aria-expanded="false"
+            aria-controls="off-screen-menu"
+            aria-label="Menü öffnen"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
         </div>
       </nav>
     </header>

@@ -220,6 +220,21 @@ a {
   display: none;
 }
 
+/* Reset the button defaults so only the three bars stay visible. */
+.ham-menu {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ham-menu:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
 /* ==========================================================
    Footer
    ========================================================== */
@@ -475,16 +490,22 @@ a {
     width: min(85vw, 18rem);
     max-height: calc(100dvh - 5.2rem);
     padding: 1.2rem;
+    /* Alpha on the background, not opacity — that would fade the text too. */
     background-color: var(--primary);
-    opacity: 0.9;
+    background-color: color-mix(in srgb, var(--primary) 90%, transparent);
     border-radius: var(--radius) 0 0 var(--radius);
     box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.24);
     overflow-y: auto;
+    /* Hidden when closed; visibility in the transition keeps the slide. */
+    visibility: hidden;
     transform: translateX(110%);
-    transition: transform 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      visibility 0.3s ease;
   }
 
   .off-screen-menu.active {
+    visibility: visible;
     transform: translateX(0);
   }
 
