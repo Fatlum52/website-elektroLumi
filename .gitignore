@@ -40,6 +40,4 @@ CLAUDE.md
 .claude/
 
 # Docs
-docs/
-docs/progress.md
-docs/tasks.md
+progress.md
