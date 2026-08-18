@@ -17,8 +17,36 @@
   </head>
 
   <body>
-    <!-- header injection -->
-    <header id="main-header"></header>
+    <header id="main-header">
+      <div class="off-screen-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-item">Start</a></li>
+          <li><a href="leistungen.html" class="nav-item">Leistungen</a></li>
+          <li><a href="referenzen.html" class="nav-item">Referenzen</a></li>
+          <li><a href="kontakt.html" class="nav-item nav-cta">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <nav class="navbar" aria-label="Hauptnavigation">
+        <div class="navbar-inner wrap">
+          <a href="index.html" class="logo">
+            <img src="assets/icons/logo.svg" alt="Elektro Lumi Logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Start</a></li>
+            <li><a href="leistungen.html" class="nav-item">Leistungen</a></li>
+            <li><a href="referenzen.html" class="nav-item">Referenzen</a></li>
+            <li><a href="kontakt.html" class="nav-item nav-cta">Kontakt</a></li>
+          </ul>
+
+          <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <main class="wrap legal">
       <h1>Impressum</h1>
@@ -75,12 +103,47 @@
       <p class="legal-stand">Stand: Juni 2026</p>
     </main>
 
-    <!-- footer injection -->
-    <footer id="footer"></footer>
+    <footer class="footer">
+      <div class="footer-inner wrap">
+        <ul class="footer-list">
+          <li class="footer-list-title">Kontakt</li>
+          <li>Elektro Lumi GmbH</li>
+          <li>Badstrasse 25</li>
+          <li>5200 Brugg</li>
+          <li><a href="mailto:info@elektrolumi.ch">info@elektrolumi.ch</a></li>
+          <li><a href="tel:+41764330935">+41 76 433 09 35</a></li>
+        </ul>
 
-    <!-- header script -->
+        <ul class="footer-list">
+          <li class="footer-list-title">Unsere Leistungen</li>
+          <li>Elektroinstallationen</li>
+          <li>Beleuchtung &amp; Komfort</li>
+          <li>Verteilungen &amp; Anschlüsse</li>
+          <li>Netzwerk &amp; Multimedia</li>
+          <li>Ladestationen</li>
+          <li>Service &amp; Reparaturen</li>
+        </ul>
+
+        <ul class="footer-list data-impressum">
+          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/icons/logo-footer3.svg" alt="Elektro Lumi Logo" />
+          </a>
+          <a href="#main-header" class="to-top" aria-label="Nach oben zum Seitenanfang">
+            <span aria-hidden="true">↑</span>
+          </a>
+        </div>
+      </div>
+      <p class="footer-copyright">
+        Copyright © 2026 Elektro Lumi GmbH – Alle Rechte vorbehalten.
+      </p>
+    </footer>
+
+    <!-- scripts -->
     <script src="js/ham-menu-loader.js"></script>
-    <script src="js/header-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
   </body>
 </html>
