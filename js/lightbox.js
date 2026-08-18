@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         figure.querySelector("figcaption")?.textContent.trim() ||
         img?.getAttribute("alt") ||
         "";
-      // data-full zeigt auf die grösste WebP-Variante; src ist nur der Fallback.
+      // data-full is the largest WebP; src is only the fallback.
       const src = img?.dataset.full || img?.getAttribute("src") || "";
       return { src, caption };
     });
