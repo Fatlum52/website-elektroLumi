@@ -71,7 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
         figure.querySelector("figcaption")?.textContent.trim() ||
         img?.getAttribute("alt") ||
         "";
-      return { src: img?.getAttribute("src") || "", caption };
+      // data-full zeigt auf die grösste WebP-Variante; src ist nur der Fallback.
+      const src = img?.dataset.full || img?.getAttribute("src") || "";
+      return { src, caption };
     });
 
   // Open when a gallery image is clicked (event delegation).

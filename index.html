@@ -24,7 +24,7 @@
     <meta property="og:url" content="https://www.elektrolumi.ch/" />
     <meta
       property="og:image"
-      content="https://www.elektrolumi.ch/assets/images/hero-img1.png"
+      content="https://www.elektrolumi.ch/assets/images-web/hero-img1-1448.jpg"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
@@ -37,7 +37,7 @@
         "@id": "https://www.elektrolumi.ch/#business",
         "name": "Elektro Lumi GmbH",
         "url": "https://www.elektrolumi.ch/",
-        "image": "https://www.elektrolumi.ch/assets/images/hero-img1.png",
+        "image": "https://www.elektrolumi.ch/assets/images-web/hero-img1-1448.jpg",
         "telephone": "+41764330935",
         "email": "info@elektrolumi.ch",
         "founder": "Hashim Cikaqi",
@@ -70,7 +70,11 @@
     <header id="main-header">
       <div class="off-screen-menu" id="off-screen-menu">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-item active" aria-current="page">Start</a></li>
+          <li>
+            <a href="index.html" class="nav-item active" aria-current="page"
+              >Start</a
+            >
+          </li>
           <li><a href="leistungen.html" class="nav-item">Leistungen</a></li>
           <li><a href="referenzen.html" class="nav-item">Referenzen</a></li>
           <li><a href="kontakt.html" class="nav-item nav-cta">Kontakt</a></li>
@@ -83,7 +87,11 @@
             <img src="assets/icons/logo.svg" alt="Elektro Lumi Logo" />
           </a>
           <ul class="nav-links">
-            <li><a href="index.html" class="nav-item active" aria-current="page">Start</a></li>
+            <li>
+              <a href="index.html" class="nav-item active" aria-current="page"
+                >Start</a
+              >
+            </li>
             <li><a href="leistungen.html" class="nav-item">Leistungen</a></li>
             <li><a href="referenzen.html" class="nav-item">Referenzen</a></li>
             <li><a href="kontakt.html" class="nav-item nav-cta">Kontakt</a></li>
@@ -108,7 +116,13 @@
       <!-- hero section -->
       <section class="hero" aria-label="Startbereich">
         <img
-          src="assets/images/hero-img1.png"
+          src="assets/images-web/hero-img1-800.webp"
+          srcset="
+            assets/images-web/hero-img1-400.webp   400w,
+            assets/images-web/hero-img1-800.webp   800w,
+            assets/images-web/hero-img1-1448.webp 1448w
+          "
+          sizes="100vw"
           alt="Bild eines Schraubenzieher, Elektroplan Steckdose und Kabel"
           class="hero-img"
           width="1448"
@@ -335,7 +349,11 @@
           <a href="index.html" class="logo">
             <img src="assets/icons/logo-footer3.svg" alt="Elektro Lumi Logo" />
           </a>
-          <a href="#main-header" class="to-top" aria-label="Nach oben zum Seitenanfang">
+          <a
+            href="#main-header"
+            class="to-top"
+            aria-label="Nach oben zum Seitenanfang"
+          >
             <span aria-hidden="true">↑</span>
           </a>
         </div>
