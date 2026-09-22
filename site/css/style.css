@@ -57,6 +57,28 @@ a {
   padding-block: 2rem 4rem;
 }
 
+.services-preview .section-title {
+  margin-bottom: 0.8rem;
+}
+
+/* Lead-in above the cards and the link below them. */
+.services-intro {
+  margin-bottom: 2rem;
+}
+
+.services-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--tertiary);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+
+.services-link:hover {
+  opacity: 0.8;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

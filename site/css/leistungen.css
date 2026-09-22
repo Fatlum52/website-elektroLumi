@@ -31,6 +31,22 @@
   line-height: 1.65;
 }
 
+/* Quiet pointer to the reference projects. */
+.hero-note {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+}
+
+.hero-note a {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.hero-note a:hover {
+  opacity: 0.8;
+}
+
 /* Übersicht */
 .leistungen-overview {
   padding-top: 1rem;
